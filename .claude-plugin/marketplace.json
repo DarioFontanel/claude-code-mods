@@ -21,7 +21,7 @@
     {
       "name": "quick-buttons",
       "source": "./quick-buttons",
-      "description": "Pannello con bottoni che lanciano i comandi ricorrenti (commit, handoff, wayfinder, replay) con un click"
+      "description": "Pannello di bottoni rapidi: al primo avvio scegli quali skill e comandi diventano bottoni, poi li lanci con un click"
     },
     {
       "name": "replay-theater",

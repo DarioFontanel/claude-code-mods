@@ -14,7 +14,7 @@
 
 **➡️ next-steps** — a fine turno propone sopra il prompt due bottoni con i prossimi passi più naturali della conversazione, più un terzo bottone Replay. Premendo un passo, il prompt corrispondente viene inviato come se lo avessi scritto tu. I passi sono generati con una richiesta al modello a ogni fine turno, che consuma token.
 
-**🎛️ quick-buttons** — un pannello laterale con un bottone per ogni comando ricorrente (`/commit`, `/handoff`, `/wayfinder`, `/replay`). Il pannello mostra solo i comandi presenti nella tua sessione: un comando assente non genera un bottone.
+**🎛️ quick-buttons** — un pannello laterale con un bottone per ogni comando ricorrente. Alla prima sessione dopo l'installazione la mod ti chiede quali skill e comandi vuoi come bottoni, elencando quelli presenti nella tua sessione; la scelta resta salvata tra le sessioni e puoi modificarla in qualsiasi momento.
 
 **⏪ replay-theater** — registra le modifiche ai file dell'ultimo turno e le mostra in un pannello, un diff alla volta. È una variante della mod di esempio pubblicata da Anthropic in [claude-code-playground](https://github.com/anthropics/claude-code-playground), distribuita con licenza Apache-2.0; le differenze sono descritte in [`replay-theater/README.md`](./replay-theater/README.md).
 
@@ -61,14 +61,15 @@ Per disattivare una mod, disabilitala o disinstallala dal tab **Installed** di `
 ## Comandi disponibili
 
 - `/replay` — apre il pannello di replay sull'ultimo turno che ha modificato file. Nel pannello: `n` passo successivo, `p` passo precedente, `c` o `Esc` chiusura.
-- `/azioni` — apre il pannello di quick-buttons. Su un terminale di almeno 144 colonne il pannello si apre da solo all'avvio della sessione. Tasti rapidi: `c` Commit, `h` Handoff, `w` Wayfinder, `x` Replay.
+- `/azioni` — apre il pannello di quick-buttons. Su un terminale di almeno 144 colonne il pannello si apre da solo all'avvio della sessione. Ogni bottone ha come tasto rapido la prima lettera libera del nome del comando.
+- `/azioni config` — riapre la scelta dei bottoni. Nel pannello di scelta: scrivi nel campo `Cerca` per filtrare l'elenco, spostati con le frecce, `Invio` aggiunge o toglie un comando, `s` salva, `n` e `p` cambiano pagina. Puoi scegliere fino a 9 comandi.
 - `ctrl+x` poi `Tab` — sposta il focus sulla banda sopra il prompt. Da lì `1` e `2` inviano i passi proposti da next-steps, `3` apre il replay.
 
 ---
 
 ## Personalizzazione
 
-**Bottoni di quick-buttons** — l'elenco è la costante `ACTIONS` in `quick-buttons/hooks/register.js`: ogni voce indica il comando da lanciare, l'etichetta e il tasto rapido. `/handoff` e `/wayfinder` sono skill personali dell'autore; sostituiscile con i comandi che usi più spesso.
+**Bottoni di quick-buttons** — si scelgono dal pannello, con `/azioni config`, senza modificare il codice. L'elenco propone skill, comandi personalizzati e comandi di altri plugin; i comandi integrati di Claude Code sono esclusi. Un comando scelto che una sessione non ha non viene mostrato in quella sessione.
 
 **Durata della cache in cache-meter** — la costante `TTL_MS` in `cache-meter/hooks/register.js` vale un'ora, la durata della prompt cache negli abbonamenti Claude. Se la tua cache dura 5 minuti, imposta `5 * 60 * 1000`.
 
