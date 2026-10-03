@@ -1,0 +1,4 @@
+{
+  "description": "Modulo hooks di quick-buttons",
+  "modules": ["./register.js"]
+}

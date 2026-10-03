@@ -1,0 +1,32 @@
+{
+  "name": "dario-mods",
+  "owner": {
+    "name": "Dario Fontanel",
+    "url": "https://dariofontanel.com/"
+  },
+  "metadata": {
+    "description": "Mod per Claude Code: barra della prompt cache, prossimi passi a fine turno, pannello di bottoni rapidi e replay delle modifiche"
+  },
+  "plugins": [
+    {
+      "name": "cache-meter",
+      "source": "./cache-meter",
+      "description": "Barra sopra il prompt che si svuota col tempo: quanto resta dell'ora di prompt cache dall'ultima richiesta"
+    },
+    {
+      "name": "next-steps",
+      "source": "./next-steps",
+      "description": "Tre bottoni sopra il prompt a fine turno: i due prossimi passi naturali della conversazione e Replay"
+    },
+    {
+      "name": "quick-buttons",
+      "source": "./quick-buttons",
+      "description": "Pannello con bottoni che lanciano i comandi ricorrenti (commit, handoff, wayfinder, replay) con un click"
+    },
+    {
+      "name": "replay-theater",
+      "source": "./replay-theater",
+      "description": "Ripercorre le modifiche ai file dell'ultimo turno, un diff alla volta (variante della mod di esempio Anthropic)"
+    }
+  ]
+}

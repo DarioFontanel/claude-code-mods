@@ -1,0 +1,6 @@
+{
+  "name": "quick-buttons",
+  "version": "0.1.0",
+  "description": "Pannello con bottoni che lanciano i comandi ricorrenti (commit, handoff, wayfinder, replay) con un click",
+  "author": { "name": "Dario Fontanel" }
+}

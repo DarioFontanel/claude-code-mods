@@ -1,0 +1,8 @@
+{
+  "name": "next-steps",
+  "version": "0.1.0",
+  "description": "Tre bottoni sopra il prompt a fine turno: i due prossimi passi naturali della conversazione e Replay",
+  "author": { "name": "Dario Fontanel" },
+  "types": "./types/index.d.ts",
+  "dependencies": ["replay-theater"]
+}

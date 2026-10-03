@@ -1,0 +1,6 @@
+{
+  "name": "cache-meter",
+  "version": "0.2.0",
+  "description": "Barra sopra il prompt che si svuota col tempo: quanto resta dell'ora di prompt cache dall'ultima richiesta",
+  "author": { "name": "Dario Fontanel" }
+}
